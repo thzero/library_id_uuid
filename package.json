@@ -19,11 +19,19 @@
   },
   "homepage": "https://github.com/thzero/library_id_uuid#readme",
   "main": "index.js",
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "cli-update": "library-cli --updateversion --pi",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "node --test \"test/*.test.js\""
   },
   "dependencies": {
     "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^9"
   }
 }
