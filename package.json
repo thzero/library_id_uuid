@@ -1,11 +1,11 @@
 {
   "name": "@thzero/library_id_uuid",
   "type": "module",
-  "version": "0.18.3",
+  "version": "0.19.1",
   "version_major": 0,
-  "version_minor": 18,
-  "version_patch": 3,
-  "version_date": "02/07/2026",
+  "version_minor": 19,
+  "version_patch": 1,
+  "version_date": "09/15/2026",
   "author": "thZero",
   "author_url": "https://www.thzero.com",
   "copyright": "2020-2026",
@@ -19,11 +19,19 @@
   },
   "homepage": "https://github.com/thzero/library_id_uuid#readme",
   "main": "index.js",
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "cli-update": "library-cli --updateversion --pi",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "node --test \"test/*.test.js\""
   },
   "dependencies": {
     "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^9"
   }
 }

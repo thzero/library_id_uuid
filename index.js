@@ -22,10 +22,15 @@ class IdUtility {
 	static setLengthShort(length) {
 	}
 
+	// uuid has no short form, so both directions are identity - the same contract
+	// library_id_nanoid implements. Returning nothing meant a caller could not
+	// round trip an id through this generator.
 	static translateToShortId(id) {
+		return id;
 	}
 
 	static translateToId(id) {
+		return id;
 	}
 }
 
